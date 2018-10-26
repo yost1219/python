@@ -1,0 +1,85 @@
+"""
+Author: Yost
+Title: Lab 3C - FunHouse
+Date: 7 Sep 2018
+
+Lab 3C: The "Fun" House
+
+Instructions
+
+Create a text-based game where the user is navigating through a "Fun" House. Prompt the user to make a decision and using if/elif/else statements, give them different outcomes based on their answers. Begin with an introduction to your fun house and prompt the user to choose between at least three different options. You can use nested if/elif/else statements to make the game more complex.
+Requirments
+
+    Adhere to PEP8 (Comments, formatting, style, etc)
+    Utilize userinput
+    Utilize proper formatting
+    Utilize proper and clean if/elif/else statements
+    Follow instructions above
+
+Additional
+
+    Take this a step further. Use some previous concepts. Here are some things you can do:
+        Create a file that holds all of your prompts
+        Store file prompts into a list, dict, etc
+        Use if/elif/else statements to validate user input
+        Use formatting to create UI elements and/or fancy prompts
+        Use operators and user input to perform calculations based on prompts
+        etc
+
+Example:
+
+print "Welcome to Fun House! Choose door 1, 2, or 3..."
+
+input = raw_input("> ")
+
+if input == "1":
+    #<code>
+    print"1"
+
+elif input == "2":
+    #<code>
+    print "2"
+
+elif input == "3":
+    #<code>
+    print "3"
+else:
+    print "Go home you're drunk."
+
+
+
+
+"""
+def funHouse():
+    damage = 1
+    armor = 1
+    hp = 10
+	print "During this game, if you make an invalid choice you will automatically end the game.  You have been warned."
+    choice = raw_input("You come across an 'abandoned' FunHouse.  Do you want to go in?  (Y)es?")
+    choice1 = choice.upper()
+    if choice1 == 'Y':
+        print "Good, good.  Chickens are no fun."
+        print "Just inside the door, you find a baseball bat and a padded leather jacket.  You wisely put them on."
+        print "Your damage and armor have increased.  Your HP is {}".format(hp)
+        choice = raw_input("You look past the entryway and see a long, dark (h)allway and a rickety (s)taircase.  Which way do you want to go?")
+        choice2 = choice.upper()
+        if choice2 == 'H':
+            print "That's bold of you.  You walk down the hall and stub your toe on a dead cat.  You lose 1 HP."
+            choice = raw_input("You have come to another intersection.  You see a (k)itchen to the left, the (b)asement ahead of you, and the (l)iving room to the right.")
+            choice3 = choice.upper()
+            if choice3 == 'K'
+                print "Luck you!  You find a butcher's knife and swap it for your bat.  Damage + 1."
+                damage+=1
+                choice = raw_input("You see a Swiss Cake Roll.  Do you want to eat it?  (Y)es?")
+                choice4 = choice.upper()
+                
+        elif choice2 == 'S':
+            print "You gingerly walk up the staircase, carefully avoiding splinters (those things will kill ya)."
+            choice = raw_input("You can enter the (b)edroom or continue down the (h)all.")
+			choice4 = choice.upper()
+        else:
+            print "In you indecision, you walked into the pole separating the hall from the stairs JUST RIGHT and break your nose."
+            print "While passed out from the pain, you drown in your own blood.  Sucks to be you."
+    else:
+        print "That wasn't even one of the options.  Deuces!"
+        return
